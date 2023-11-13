@@ -4,7 +4,7 @@
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram import filters, Client, enums, errors
 from pyrogram.errors import UserNotParticipant
-from RknDeveloper.untils.database import add_user, add_group
+from RknDeveloper.untils.database import add_user, add_group, already_db
 from configs import rkn1
 import random, asyncio
 import os
@@ -70,7 +70,7 @@ async def op(bot, m :Message):
                 InlineKeyboardButton("✛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ࿇", url="https://t.me/Rkn_AutoRequestApprovebot?startgroup=Bots4Sale&admin=invite_users+manage_chat")
                 
             ]])            
-    
+        if not await already_db(m.from_user.id):
             add_user(m.from_user.id)
             await bot.send_message(
             rkn1.LOG_CHANNEL,
