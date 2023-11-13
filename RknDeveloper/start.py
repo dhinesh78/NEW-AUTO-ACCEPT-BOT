@@ -71,7 +71,7 @@ async def op(bot, m :Message):
                 
             ]])            
             if not await already_db(m.from_user.id):
-                add_user(m.from_user.id)
+                await add_user(m.from_user.id)
                 await bot.send_message(
                 rkn1.LOG_CHANNEL,
                 f"**--Nᴇᴡ Uꜱᴇʀ Sᴛᴀʀᴛᴇᴅ Tʜᴇ Bᴏᴛ--**\n\nUꜱᴇʀ: {m.from_user.mention}\nIᴅ: `{m.from_user.id}`\nUɴ: @{m.from_user.username}"
