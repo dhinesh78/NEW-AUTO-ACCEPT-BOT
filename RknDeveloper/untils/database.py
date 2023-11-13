@@ -31,9 +31,9 @@ def add_user(user_id):
         return
     return users.insert_one({"user_id": str(user_id)}) 
 
-#def is_user_exist(user_id):
-  #  user = users.find_one({"user_id": str(user_id)})
-   # return bool(user)
+def is_user_exist(user_id):
+    user = users.find_one({"user_id": str(user_id)})
+    return bool(user)
         
 def remove_user(user_id):
     in_db = already_db(user_id)
