@@ -9,7 +9,7 @@ class Config:
     UPDATE_CHANNEL = getenv("UPDATE_CHANNEL", "DP_BOTZ")
     UPDATECHANNEL_ID = int(getenv("UPDATECHANNEL_ID", "-1002008853384"))
     ADMIN = list(map(int, getenv("ADMIN", "1242556540").split()))
-    MONGO_URI = getenv("MONGO_URI", "")
+    MONGO_URI = getenv("MONGO_URI", "mongodb+srv://Aloneboy:Aloneboytg@cluster0.nmeelsr.mongodb.net/?retryWrites=true&w=majority")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001789244683"))
     
     #web response 
