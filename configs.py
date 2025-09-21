@@ -5,7 +5,7 @@ import os, time
 class Config:
     API_ID = int(getenv("API_ID", "20652787"))
     API_HASH = getenv("API_HASH", "5dea928561e4d2eb77a371edf8b2eb2a")
-    BOT_TOKEN = getenv("BOT_TOKEN", "6720259127:AAFm3tGJl03N0ByWDOvevGiM_z4lpddeNr4")
+    BOT_TOKEN = getenv("BOT_TOKEN", "6720259127:AAHF11Er4MAGNma2aDpkbwlF2YgAroZw2Sw")
     UPDATE_CHANNEL = getenv("UPDATE_CHANNEL", "DP_BOTZ")
     UPDATECHANNEL_ID = int(getenv("UPDATECHANNEL_ID", "-1002008853384"))
     ADMIN = list(map(int, getenv("ADMIN", "1242556540").split()))
